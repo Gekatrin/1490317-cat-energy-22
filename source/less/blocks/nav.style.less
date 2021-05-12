@@ -1,0 +1,46 @@
+
+@font-face {
+  font-family: "Oswald";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/oswaldregular.woff") format("woff2"),
+    url("../fonts/oswaldregular.woff2") format("woff");
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.site-list__item {
+  list-style: none;
+  .font-oswald;
+  font-weight: 400;
+  color: @black;
+  text-transform: uppercase;
+}
+
+@media (max-width: @mobile-width) {
+  .site-list__item {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .site-list__item {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+}
